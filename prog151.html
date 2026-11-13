@@ -1,0 +1,87 @@
+<html>
+    
+<head>
+    <title>
+        program 16
+    </title>
+
+
+</head>
+
+<body>
+
+<select id="one"></select>
+
+<select id="two"></select>
+
+<script>
+   // var b=[12,221,33,55,55,555,588,44,66,44,88,8,77,8,8,8,51,55,55];
+
+
+   var a=[
+    {name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},    {name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},    {name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'},
+{name:'ravi', age:20,
+address:'dadri'}
+   
+
+];
+
+
+console.log(a);
+console.log(typeof(a));
+
+
+
+var c=a.map((u)=>{
+
+    return '<option>'${u}'<option>';
+
+})
+
+var mydropdown=document.getElementById('one');
+mydropdown.innerHTML=c;
+
+
+
+
+var d=a.map((u)=>{
+
+return '<option>'${u}'<option>';
+
+})
+
+var mydropdown1=document.getElementById('two');
+mydropdown1.innerHTML=d;
+
+</script>
+
+</body>
+
+</html>

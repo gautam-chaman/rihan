@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>getset interval</title>
+    </head>
+    <body>
+
+
+        <h1 id="one"></h1>
+
+        <input type="button" value="submit" onclick="abc()">
+        <script>
+
+       
+var a=1;
+
+function abc(){
+
+    document.getElementById('one').innerHTML=a;
+    a++;
+
+}
+
+setInterval('abc()',100);
+
+
+
+
+       
+
+        </script>
+
+    </body>
+</html>

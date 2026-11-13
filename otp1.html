@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>
+            create otp
+        </title>
+        <style>
+            *
+            {
+                margin:0 auto;
+                padding: 0;
+            }
+            body
+            {
+                padding:50px;
+            }
+            p
+            {
+                font-size: 50px;
+                font-weight: 600;
+                font-family: monospace;
+                letter-spacing: 10px;	
+                display: inline-block;
+            }
+            .cap>input
+            {
+                font-size: 25px;
+                text-transform: uppercase;
+                font-weight: 600;
+                padding: 2px;
+                width: 40px;
+                text-align: center;
+            }
+            .cap
+            {
+                margin-bottom: 20px;
+                margin-top:20px;
+            }
+        </style>
+    </head>
+    <body>
+    <p></p>	
+    <input type="button" value="reset" onclick="opt()">
+    <div class="cap">
+        <input type="text" id="one" maxlength="1">
+        <input type="text" id="two" maxlength="1">
+        <input type="text" id="three" maxlength="1">
+        <input type="text" id="four" maxlength="1">
+    </div>
+    <button type="button" onclick="getotp()">submit</button>
+    
+<script>
+
+function opt(){
+
+    var a=Math.random()+1;
+    var b=parseInt(a*1254);
+    console.log(b);
+
+    document.querySelector('p').innerHTML=b;
+	localStorage.setItem("otpdetail",b);
+
+}
+
+window.onload=function(){
+    opt();
+}
+
+function getotp(){
+var getItemvalue;
+var first=document.getElementById('one');
+var second=document.getElementById('two');
+var third=document.getElementById('three');
+var fourth=document.getElementById('four');
+
+get.otpvalue=first.value+second.value+third.value+fourth.value;
+
+var localotp=localStorage.getItem("otpdetails");
+
+console.log(localotp);
+if(getotpvalue==localotp)
+	{
+		alert("welcome");
+		window.location="program18.html";
+	}
+	else
+	{
+		alert("wrong");
+			first.value="";
+			second.value="";
+			third.value="";
+			fourth.value="";
+			first.focus();
+			opt();
+	}
+
+
+}
+setInterval(()=>{
+	opt();
+},20000);
+
+</script>
+
+
+
+
+</body>
+
+</html>

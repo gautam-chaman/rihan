@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		@import url('program4.css');
+	</style>
+	<script src="program4.js"></script>
+</head>
+<body>
+
+<div class="editor">
+	<section>
+		<fieldset>
+			<legend>Text Color</legend>
+			<input type="color" id="tcolor" oninput="textcolor()">
+		</fieldset>
+		<fieldset>
+			<legend>Font Size</legend>
+			<input type="number"  min="5" max="500" value="12" id="tsize" oninput="textsize()">
+		</fieldset>
+		<fieldset>
+			<legend>Font Family</legend>
+			<select id="fname" onchange="textfont()">
+				<option hidden>font name list</option>
+				<option>fantasy</option>
+				<option>cursive</option>
+				<option>monospace</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Font Format</legend>
+				<button type="button" onclick="textbold()">B</button>
+		</fieldset>
+	</section>
+	<section>
+		<div id="output"> The World Wide Web, commonly known as the Web, is an information system enabling documents and other web resources to be accessed over the Internet. Documents and downloadable media are made available to the network through web servers and can be accessed by programs such as web browsers</div>
+	</section>
+</div>
+
+<!-- <script>
+
+
+var mainobj = document.getElementById('output');
+
+function textcolor()
+{	
+	var tc = document.getElementById('tcolor');
+	mainobj.style.color=tc.value;
+}
+
+function textsize()
+{
+	var ts =document.getElementById('tsize'); 
+	mainobj.style.fontSize=ts.value+'px';
+}
+
+</script> -->
+
+</body>
+</html>
